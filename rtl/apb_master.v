@@ -1,4 +1,4 @@
-module apb_master(
+    module apb_master(
     input wire clk,
     input wire resetn,
 
