@@ -4,7 +4,7 @@ This project details the design and FPGA implementation of an AXI4-Lite to APB p
 
 
 
-## 📋 Project Overview
+## Project Overview
 The bridge performs protocol translation, address decoding, and data multiplexing to ensure seamless interaction between heterogeneous bus protocols. This implementation specifically targets the **Nexys A7 FPGA** board, addressing practical considerations like timing closure and resource optimization.
 
 ### Key Features
@@ -12,7 +12,7 @@ The bridge performs protocol translation, address decoding, and data multiplexin
 * **Standard Compliance**: State machines follow AMBA specifications for both AXI4-Lite and APB protocols.
 * **Timing Optimized**: Includes pipelined data paths and one-hot FSM encoding to meet high-frequency hardware constraints.
 
-## 🏗️ Architecture and Design
+## Architecture and Design
 The modular architecture consists of four primary components:
 1. **AXI-to-Request Converter**: A 7-state FSM handling AXI4-Lite slave protocol operations.
 2. **APB Master Controller**: A 3-state FSM managing APB transactions (IDLE, SETUP, ACCESS).
@@ -31,7 +31,7 @@ The address decoder uses bits [19:16] of the AXI address bus to select periphera
 | **Slave 2 (SPI)** | `0x4002_0000` | 0x20000 - 0x2FFFF |
 | **Slave 3 (Timer)** | `0x4003_0000` | 0x30000 - 0x3FFFF |
 
-## 🚀 Implementation Results
+## Implementation Results
 The design was synthesized and implemented using **Xilinx Vivado** targeting the **Artix-7 XC7A100T-CSG324**.
 
 ### Resource Utilization
@@ -45,7 +45,7 @@ The design was synthesized and implemented using **Xilinx Vivado** targeting the
 * **Worst Hold Slack (WHS)**: 0.022 ns
 * **Theoretical Max Frequency**: ~170 MHz
 
-## 🧪 Verification
+## Verification
 Functional verification was performed using a self-checking testbench.
 
 | Test Case | Status |
@@ -57,7 +57,7 @@ Functional verification was performed using a self-checking testbench.
 | Back-to-Back Writes | **PASS** |
 | Invalid Address Read | **FAIL** |
 
-## 🛠️ Tools Used
+## Tools Used
 * **HDL**: Verilog
 * **Simulation**: Icarus Verilog / GTKWave
 * **Synthesis**: Xilinx Vivado
