@@ -69,6 +69,3 @@ Functional verification was performed using a self-checking testbench to validat
 
 ---
 *Submitted by Vaisakh Melaveetil Shaju - Manipal Institute of Technology, Bengaluru.*
-
----
-*Submitted by Vaisakh Melaveetil Shaju - Manipal Institute of Technology, Bengaluru.*
